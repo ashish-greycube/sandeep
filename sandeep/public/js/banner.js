@@ -2,10 +2,10 @@ $(document).ready(async function () {
     let company = frappe.defaults.get_default("company");
 
     let color_list = [
-        { background: "#5f9ea05e", color: "#487274" },
-        { background: "#5fa06d5e", color: "#487452" },
-        { background: "#895fa05e", color: "#644874" },
-        { background: "#a0745f5e", color: "#745548" }
+        { background: "#5f9ea0", color: "#ffffff" },
+        { background: "#5fa06d", color: "#ffffff" },
+        { background: "#895fa0", color: "#ffffff" },
+        { background: "#a0745f", color: "#ffffff" }
     ]
 
     let company_doc = await frappe.get_list("Company")
