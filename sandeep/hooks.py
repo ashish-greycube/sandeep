@@ -26,7 +26,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/sandeep/css/sandeep.css"
-# app_include_js = "/assets/sandeep/js/sandeep.js"
+app_include_js = "/assets/sandeep/js/banner.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/sandeep/css/sandeep.css"
@@ -43,7 +43,7 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Sales Order" : "public/js/sales_order.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -137,13 +137,14 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Sales Order": {
+		"validate": "sandeep.api.check_for_valid_rate_and_discount"
+	},
+    "Sales Invoice": {
+		"validate": "sandeep.api.check_for_valid_rate_and_discount"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
