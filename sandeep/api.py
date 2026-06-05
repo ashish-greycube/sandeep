@@ -16,9 +16,9 @@ def fetch_customer_po_and_set_in_user_remarks(doc, method):
     if len(unique_so_list)>0:
         for so in unique_so_list:
             customer_po_number = frappe.db.get_value("Sales Order", so, "po_no")
-            if customer_po_number not in po_no_list:
+            if customer_po_number and customer_po_number not in po_no_list:
                 po_no_list.append(customer_po_number)
-
+    print(po_no_list,"===========================")
     if len(po_no_list)>0:
         po_no_str = ", ".join(po_no_list)
     else :
