@@ -142,7 +142,8 @@ doc_events = {
 		"validate": "sandeep.api.check_for_valid_rate_and_discount"
 	},
     "Sales Invoice": {
-		"validate": "sandeep.api.check_for_valid_rate_and_discount"
+		"validate": ["sandeep.api.check_for_valid_rate_and_discount",
+               		 "sandeep.api.fetch_customer_po_and_set_in_user_remarks"],
 	}
 }
 
