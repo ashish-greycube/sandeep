@@ -26,7 +26,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/sandeep/css/sandeep.css"
-app_include_js = "/assets/sandeep/js/banner.js"
+app_include_js = "/assets/sandeep/js/sandeep.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/sandeep/css/sandeep.css"
